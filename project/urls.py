@@ -17,6 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Project
+from create_blog import views
+from create_blog.ViewClassForm import ViewClassForm
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('viewclassform/', ViewClassForm.as_view(), name='viewform'),
+    path('multistepformexample/', views.multistepformexample, name='multistepformexample'),
+    path('multistepformexample_save/', views.multistepformexample_save,
+         name='multistepformexample_save'),
 ]
