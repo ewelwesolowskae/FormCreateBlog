@@ -13,18 +13,20 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 # Django
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
 # Project
-from create_blog import views
-from create_blog.ViewClassForm import ViewClassForm
+from create_blog.views import multistepformexample
+from create_blog.views import multistepformexample_save
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('viewclassform/', ViewClassForm.as_view(), name='viewform'),
-    path('multistepformexample/', views.multistepformexample, name='multistepformexample'),
-    path('multistepformexample_save/', views.multistepformexample_save,
+    path('multistepformexample/', multistepformexample, name='multistepformexample'),
+    path('multistepformexample_save/', multistepformexample_save,
          name='multistepformexample_save'),
-]
+ ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

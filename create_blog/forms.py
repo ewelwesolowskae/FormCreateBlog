@@ -1,11 +1,17 @@
 """Forms for "create_blog" application."""
+
 # Django
 from django import forms
 
+# Local
+from .models import MultiStepFormModel
 
-class TestForm(forms.Form):
-    """Class for the application "create_blog."""
 
-    name = forms.CharField(label='Name')
-    email = forms.CharField(label='Email')
-    file = forms.FileField()
+class PostyForm(forms.ModelForm):
+    """A class built from the MultiStepFormModel model."""
+
+    class Meta:
+        """Meta class for the MultiStepFormModel model."""
+
+        model = MultiStepFormModel
+        fields = '__all__'
