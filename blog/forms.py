@@ -4,7 +4,7 @@
 from django import forms
 
 # Local
-from .models import MultiStepFormModel
+from .models import MultiStepsForm
 
 
 class PostyForm(forms.ModelForm):
@@ -13,5 +13,5 @@ class PostyForm(forms.ModelForm):
     class Meta:
         """Meta class for the MultiStepFormModel model."""
 
-        model = MultiStepFormModel
+        model = MultiStepsForm
         fields = '__all__'

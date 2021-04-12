@@ -5,6 +5,6 @@ from django.apps import AppConfig
 
 
 class CreateBlogConfig(AppConfig):
-    """Class for the application "create_blog."""
+    """Class for the application "blog."""
 
-    name = 'create_blog'
+    name = 'blog'

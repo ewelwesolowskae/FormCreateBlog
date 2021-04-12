@@ -4,6 +4,6 @@
 from django.contrib import admin
 
 # Project
-from create_blog.models import MultiStepFormModel
+from blog.models import MultiStepsForm
 
-admin.site.register(MultiStepFormModel)
+admin.site.register(MultiStepsForm)
