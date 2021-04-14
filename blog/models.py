@@ -9,10 +9,10 @@ class MultiStepsForm(models.Model):
 
     blog_name = models.CharField(max_length=255, null=True, unique=True)
     description = models.CharField(max_length=255)
-    test = models.CharField(max_length=255, null=True)
+    topic = models.CharField(max_length=255, null=True)
     twitter = models.CharField(max_length=255, null=True)
     facebook = models.CharField(max_length=255, null=True)
     instagram = models.CharField(max_length=255, null=True)
     pinterest = models.CharField(max_length=255, null=True)
-    image11 = models.ImageField(null=True, upload_to='media')
-    image12 = models.ImageField(null=True)
+    image1 = models.ImageField(null=True, upload_to='media')
+    image2 = models.ImageField(null=True, upload_to='media')
